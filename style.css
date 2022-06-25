@@ -11,7 +11,7 @@ body {
     font-family: 'Lexend Deca', sans-serif;
 
 }
-a{
+span{
     text-decoration: none;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 500;
@@ -39,12 +39,8 @@ h1{
     padding: 2rem 0 2rem 2.5rem;  
     margin: 0;
 }
-.attribution{
-    display: flex;
-    align-items: flex-end;
-    justify-content:center;
-    flex-wrap: wrap;
- }
+
+
 /* styling classes */
 .heading-color{
     color:  hsl(0, 0%, 95%);
@@ -53,7 +49,7 @@ h1{
     color: hsla(0, 0%, 100%, 0.75);
 }
 .button-background-color{
-    color:  hsl(0, 0%, 95%);
+    background-color:  hsl(0, 0%, 95%);
 }
 .button-style{
     border-style: hidden;
@@ -61,6 +57,7 @@ h1{
     width: 8rem;
     padding: 1rem;
     margin-left: 2.5rem;
+    cursor: pointer;
 }
 
 .sedan{
@@ -74,22 +71,18 @@ h1{
     background-color: hsl(179, 100%, 13%) ;
     border-radius: 0 0.6rem 0.6rem 0;
 }
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: left;
-    width: 18rem;
-    height: 28rem;
-}
-.link1{
+
+.button1 span{
     color: hsl(31, 100%, 50%);
+    padding: 15px 7px;
 }
-.link2{
+.button2 span{
     color: hsl(184, 97%, 27%);
+    padding: 15px 7px;
 }
-.link3{
+.button3 span{
     color: hsl(178, 96%, 20%);
+    padding: 15px 7px;
 }
 
 .attribution{
@@ -101,13 +94,70 @@ h1{
 .attribution p{
     width: fit-content;
 }
-/* content view for mobile */
-@media screen and (min-width: 375px){
 
+/* effects */
+@media (hover:hover){
+    .button1:hover{
+        background-color:hsl(31, 77%, 52%);
+        border-color: white;
+        border-style: solid;
+    }
+    .button1 span:hover{
+        color: white;
+    }
+    
+    .button2:hover{
+        background-color:hsl(184, 100%, 22%);
+        border-color: white;
+        border-style: solid;
+    }
+
+    .button2 span:hover{
+        color: white;
+    }
+    .button3:hover{
+        background-color:hsl(179, 100%, 13%);
+        border-color: white;
+        border-style: solid;
+    }
+    
+    .button3 span:hover{
+        color: white;
+    }
 }
 
-/* content view for desktop */
+@media (hover:none){
+}
+
+/* content view for mobile */
+@media screen and (min-width: 370px) and (max-width:500px){
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 360px;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content:center;
+        width: 20rem;
+        height: 30rem;
+    }
+    .sedan{
+        border-radius: 0.6rem 0.6rem 0 0;
+    } 
+    .luxury{
+        border-radius: 0 0 0.6rem 0.6rem;
+    }
+}
+
+
 @media screen and (min-width: 1440px){
+   
     main{
         height: 90vh;
         display: flex;
@@ -115,7 +165,7 @@ h1{
         align-content: center;
         overflow: hidden;
     }
-    
+
     section{
         height: 85vh;
         display: flex;
@@ -124,4 +174,13 @@ h1{
         align-items: center;
             
     }
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: left;
+        width: 18rem;
+        height: 28rem;   
+    }
+    
 }
